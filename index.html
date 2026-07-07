@@ -1,13 +1,381 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Kevin Kuhn website!!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Kuhn | Graphics & Tools Programmer</title>
+    <style>
+        /* Base Reset & Typography */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #121212; 
+            color: #e0e0e0; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6; 
+        }
+        
+        /* Header Styling */
+        header { 
+            padding: 5rem 2rem 2rem; 
+            max-width: 800px; 
+            margin: auto; 
+        }
+        h1 { 
+            font-size: 2.5rem; 
+            margin-bottom: 0.2rem; 
+            color: #ffffff; 
+            letter-spacing: -0.5px;
+        }
+        header h2 { 
+            font-size: 1.2rem; 
+            font-weight: 400; 
+            color: #a0a0a0; 
+            margin-top: 0; 
+            margin-bottom: 0.5rem;
+        }
+        .degree {
+            font-size: 0.95rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        
+        .summary {
+            font-size: 1.05rem;
+            color: #cccccc;
+            margin-bottom: 1.5rem;
+            max-width: 90%;
+        }
+
+        /* Layout */
+        .container { 
+            max-width: 800px; 
+            margin: auto; 
+            padding: 0 2rem 4rem; 
+        }
+
+        /* Section Titles */
+        .section-title {
+            color: #ffffff;
+            font-size: 1.6rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #2a2a2a;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        /* Content Cards (Experience & Projects) */
+        .card { 
+            background: #1e1e1e; 
+            padding: 2rem; 
+            border-radius: 8px; 
+            margin-bottom: 2rem; 
+            border-left: 4px solid #4CAF50; 
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* Card Headers */
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .card h3 { 
+            margin-top: 0; 
+            margin-bottom: 0.2rem;
+            color: #ffffff; 
+            font-size: 1.4rem;
+        }
+        .role-title {
+            color: #a0a0a0;
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        .date {
+            color: #888;
+            font-size: 0.9rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        /* Tech Stack Tags */
+        .tags { 
+            display: flex; 
+            gap: 0.5rem; 
+            margin-bottom: 1rem; 
+            flex-wrap: wrap;
+        }
+        .tag { 
+            background: #2a2a2a; 
+            padding: 0.3rem 0.6rem; 
+            border-radius: 4px; 
+            font-size: 0.85rem; 
+            font-family: 'Courier New', Courier, monospace; 
+            color: #4CAF50;
+            border: 1px solid #333;
+        }
+        
+        /* Links */
+        a { 
+            color: #4CAF50; 
+            text-decoration: none; 
+            font-weight: 500; 
+            transition: color 0.2s ease;
+        }
+        a:hover { 
+            color: #66bb6a;
+            text-decoration: underline; 
+        }
+        .links { margin-top: 1rem; }
+        .links a { 
+            margin-right: 1.2rem; 
+            font-size: 0.95rem;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            .card-header { flex-direction: column; gap: 0.2rem; margin-bottom: 0.5rem; }
+            .date { order: -1; margin-bottom: 0.5rem; }
+        }
+
+        /* Images */
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 2px solid #4CAF50;
+        }
+        .card-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #333;
+        }
+        @media (max-width: 600px) {
+            .card-img { height: 180px; }
+        }
+    </style>
 </head>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph. Testing 123</p>
+    <header>
+        <!-- <img src="https://placehold.co/150x150/2a2a2a/888888?text=Profile+Pic" alt="Kevin Kuhn" class="profile-pic"> -->
+        <h1>Kevin Kuhn</h1>
+        <h2>Graphics & Tools Programmer</h2>
+        <div class="degree">BS Computer Science | MS Digital Production Arts</div>
+        <p class="summary">Programmer focused on the intersection of rendering, physics, and asset pipelines. Passionate about building robust tools and precise, high-performance gameplay systems.</p>
+        <div class="links">
+            <a href="https://github.com/kkuhn317" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/kevin-r-kuhn/" target="_blank">LinkedIn</a> 
+            <a href="mailto:kevin@thekuhnfamily.org">Email</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="skills-section">
+            <h2 class="section-title" style="margin-top: 0;">Technical Arsenal</h2>
+            <div class="tags">
+                <span class="tag">C++ / C#</span>
+                <span class="tag">Python</span>
+                <span class="tag">Unity</span>
+                <span class="tag">OpenGL</span>
+                <span class="tag">React Native</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">.NET MAUI</span>
+                <span class="tag">React / JS</span>
+                <span class="tag">PBRT</span>
+                <span class="tag">GameCI</span>
+            </div>
+        </div>
+
+        <h2 class="section-title">Experience</h2>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>SermonAudio</h3>
+                <span class="date">Jan 2023 &ndash; Dec 2024</span>
+            </div>
+            <div class="role-title">Mobile App Developer</div>
+            <img src="images/churchone.webp" alt="SermonAudio Mobile App" class="card-img">
+            <div class="tags">
+                <span class="tag">React Native</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">.NET MAUI</span>
+                <span class="tag">Xamarin</span>
+            </div>
+            <p>Engineered the modernization of legacy Xamarin applications into a modern cross-platform architecture. Evaluated and prototyped replacement solutions using .NET MAUI and Flutter before driving the core development in React Native. Successfully developed and shipped the <strong>ChurchOne</strong> app to the app store in July 2024, while simultaneously building the scalable foundation for the main SermonAudio app. Focused on delivering seamless media playback and optimizing rendering performance for large datasets.</p>
+            <div class="links">
+                <a href="https://play.google.com/store/apps/details?id=com.sermonaudio.MyChurch">View on Google Play &rarr;</a>
+                <a href="http://apps.apple.com/us/app/churchone-by-sermonaudio/id1488623753">View on Apple App Store &rarr;</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">Awards & Recognition</h2>
+
+        <div class="card">
+            <div style="margin-bottom: 1.5rem;">
+                <div class="card-header" style="margin-bottom: 0.2rem;">
+                    <h3 style="font-size: 1.25rem; color: #4CAF50;">Outstanding M.S. Student in Digital Production Arts</h3>
+                    <span class="date">Clemson University</span>
+                </div>
+                <p style="margin: 0; color: #cccccc; font-size: 0.95rem;">Awarded by faculty for exceptional academic and technical performance within the master's program.</p>
+            </div>
+            <div>
+                <div class="card-header" style="margin-bottom: 0.2rem;">
+                    <h3 style="font-size: 1.25rem; color: #4CAF50;">1st Place &ndash; Programming Competition</h3>
+                    <span class="date">Bob Jones University</span>
+                </div>
+                <p style="margin: 0; color: #cccccc; font-size: 0.95rem;">Demonstrated rapid problem solving, algorithmic efficiency, and debugging under a strict time limit.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>LUMMM</h3>
+            </div>
+            <img src="images/lummm.png" alt="LUMMM Gameplay" class="card-img">
+            <div class="tags">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">GameCI</span>
+            </div>
+            <p>A collaborative fan project consisting of linear platformer levels translated from 2D animations. Implemented precise player physics, state machine logic, and automated WebGL builds and deployments via GameCI.</p>
+            <div class="links">
+                <a href="https://bookwormkevin.itch.io/lummm">Play WebGL Build &rarr;</a>
+                <a href="https://github.com/kkuhn317/LUMMM">View Repository &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Thin-Film Interference Material</h3>
+            </div>
+            <img src="images/Bubble.png" alt="Thin-Film Interference Render" class="card-img">
+            <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">PBRT</span>
+                <span class="tag">Optical Physics</span>
+            </div>
+            <p>Developed for an Advanced Computer Graphics course, this custom physically based rendering material implements Rouard's Method and spectral loops to simulate thin-film interference on surfaces like soap bubbles. The project culminated in a final render of a compact disk's complex iridescence, demonstrating accurate computation of light behavior while highlighting challenges and areas for further refinement in physical light simulation.</p>
+            <div class="links">
+                <a href="https://github.com/kkuhn317/pbrt-v3/tree/a3">View Source Code &rarr;</a>
+            </div>
+        </div>
+
+        <!-- not released yet, will uncomment when public -->
+        <!-- <div class="card">
+            <div class="card-header">
+                <h3>Mario Level Converter</h3>
+            </div>
+            <img src="https://placehold.co/800x400/2a2a2a/888888?text=Level+Converter+Interface" alt="Mario Level Converter UI" class="card-img">
+            <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Web UI</span>
+                <span class="tag">State Management</span>
+            </div>
+            <p>A standalone web utility designed to parse and translate 2D level data. Built with a focus on robust state management and a clean user interface to streamline asset pipelines independent of the main game engine.</p>
+            <div class="links">
+                <a href="#">View Architecture &rarr;</a>
+            </div>
+        </div> -->
+
+        <div class="card">
+            <div class="card-header">
+                <h3>OpenGL Fighting Game Prototype</h3>
+            </div>
+            <img src="images/openglmario.png" alt="OpenGL Fighting Game Prototype" class="card-img">
+            <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">OpenGL</span>
+                <span class="tag">Graphics API</span>
+            </div>
+            <p>A custom combat game prototype built entirely from scratch using C++ and OpenGL. Focused on understanding the rendering pipeline, handling low-level memory management, and implementing custom collision detection and game loops without relying on a commercial engine.</p>
+            <div class="links">
+                <a href="https://github.com/kkuhn317/OpenGLMario">View Source Code &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>VR Automotive Training Sim</h3>
+            </div>
+            <!-- <img src="https://placehold.co/800x400/2a2a2a/888888?text=VR+Training+Sim" alt="VR Automotive Training Simulation" class="card-img"> -->
+            <div class="tags">
+                <span class="tag">VR / XR</span>
+                <span class="tag">C#</span>
+                <span class="tag">3D Interaction</span>
+            </div>
+            <p>A collaborative virtual reality experience designed to teach real-world maintenance tasks, such as jumpstarting a car and changing oil. Programmed spatial interactions, sequence logic, and grab-physics to guide users through hands-on educational processes.</p>
+            <div class="links">
+                <a href="https://github.com/kkuhn317/VRCarMaintenance">View Source Code &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Custom Programming Language</h3>
+            </div>
+            <div class="tags">
+                <span class="tag">Compilers</span>
+                <span class="tag">Parsing</span>
+                <span class="tag">Data Structures</span>
+            </div>
+            <p>Designed and developed a custom programming language with basic syntax to deepen understanding of language architecture. Built the lexer, parser, and abstract syntax tree (AST) evaluators from the ground up to process and execute custom logic.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Polyomino Solver Engine</h3>
+            </div>
+            <img src="images/kanoodle.png" alt="Polyomino Solver UI" class="card-img">
+            <div class="tags">
+                <span class="tag">Algorithms</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Data Structures</span>
+            </div>
+            <p>A computational engine and UI designed to solve the Kanoodle puzzle. Utilizes heavily optimized backtracking algorithms and efficient state management to calculate solutions for complex 2D packing constraints.</p>
+            <div class="links">
+                <a href="https://kkuhn317.github.io/kanoodle-solver/">View Interactive Build &rarr;</a>
+                <a href="https://github.com/kkuhn317/kanoodle-solver">View Source Code &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Baba Is You Level Solver</h3>
+            </div>
+            <img src="images/babasolver.png" alt="Baba Is You Level Solver" class="card-img">
+            <div class="tags">
+                <span class="tag">Algorithms</span>
+                <span class="tag">State-Space Search</span>
+                <span class="tag">Optimization</span>
+            </div>
+            <p>Developed an automated solver for the rule-mutating puzzle game "Baba Is You" utilizing multiple search architectures. To overcome the exponential state explosion of standard BFS and push-combination algorithms, I engineered an optimized "Logic Solver." This advanced mode evaluates high-level macro-actions (e.g., making/breaking rules, sinking objects) and simulates the resulting board states to calculate logical solution steps for complex levels.</p>
+            <div class="links">
+                <a href="https://github.com/kkuhn317/baba-solver">View Source Code &rarr;</a>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 </html>
-
